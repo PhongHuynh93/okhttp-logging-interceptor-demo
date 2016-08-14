@@ -1,13 +1,12 @@
 package com.learn2crack.recyclerjsonparsing;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -74,11 +73,12 @@ public class MainActivity extends AppCompatActivity {
         call.enqueue(new Callback<JSONResponse>() {
             @Override
             public void onResponse(Call<JSONResponse> call, Response<JSONResponse> response) {
-
-                JSONResponse jsonResponse = response.body();
-                data = new ArrayList<>(Arrays.asList(jsonResponse.getAndroid()));
-                adapter = new DataAdapter(data);
-                recyclerView.setAdapter(adapter);
+                // TODO: 8/14/16 test this json response before add to adapter
+//
+//                JSONResponse jsonResponse = response.body();
+//                data = new ArrayList<>(Arrays.asList(jsonResponse.getAndroid()));
+//                adapter = new DataAdapter(data);
+//                recyclerView.setAdapter(adapter);
             }
 
             @Override
